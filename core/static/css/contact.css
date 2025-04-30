@@ -1,0 +1,46 @@
+body{
+    background-color: #f0f8ff;
+}
+form div {
+    margin-bottom: 15px;
+}
+
+form input, form textarea {
+    font-size: 1rem;
+    background-color: #fff8fb;
+}
+
+form button {
+    background-color: #cc2e6c;
+}
+
+form button:hover {
+    background-color: #a9255b;
+}
+
+ul.social-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+ul.social-links li img {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s;
+}
+
+ul.social-links li img:hover {
+    transform: scale(1.1);
+}
+
+.contact-ul{
+    margin-top:10px;
+    margin-top:10px;
+
+}
+.contact-h2{
+    margin-top: 19px;;
+}
+

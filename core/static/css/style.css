@@ -1,0 +1,686 @@
+ html, body {
+    overflow-x: hidden; 
+} 
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(215, 78, 197);
+}
+.para{
+    font-size: 30px;
+}
+.about-page {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff0f7;
+    border-bottom: 3px solid #f3d1e3;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    bottom:1;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+}
+
+.header-center {
+    flex-grow: 1;
+    
+    text-align: center;
+}
+.header-center h1{
+    font-size:70px;
+}
+.header-left,.header-right
+ {
+    width: 60px;
+    height: 60px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.shop-name {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #d14c8b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+nav.navbar {
+    top: 100px; 
+}
+
+/* Search Bar */
+.search-bar {
+    margin: 10px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-bar form {
+    display: flex;
+    gap: 15px;
+}
+
+#search{
+    margin-top:3px;
+    width:18%;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.search-bar button {
+    background: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #a61c5f;
+}
+body {
+    padding-top: 70px; 
+    overflow-x: hidden; 
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffafc;
+    color: #333;
+    padding-bottom: 50px;
+}
+
+nav.navbar {
+    position:fixed; /* default position */
+    top:100px;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffeff6;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-bottom: 3px solid #f3d1e3;
+    transition: all 0.3s ease;
+}
+
+/* Sticky class to apply on scroll */
+nav.navbar.sticky {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+nav.navbar a,
+nav.navbar span {
+    color: #d14c8b;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+nav.navbar a:hover {
+    text-decoration: underline;
+}
+
+nav.navbar .welcome-text {
+    color: #cc2e6c;
+}
+
+/* Add this to your existing CSS */
+
+.navbar a.active {
+
+    background-color: #d14c8b; /* Box color */
+    color: white; /* Text color */
+    /* padding: 0px 10px; */
+    /* border-radius: 5px; */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a.active:hover {
+    background-color: #a03e72; /* Darker shade on hover */
+}
+
+
+.container {
+    padding: 120px;
+    /*background-image: url(background.jpg);*/
+    background-size: cover;
+    opacity: 1;
+    
+}
+
+
+.flower-grid-wrapper {
+    padding: 0 20px;
+}
+
+.flower-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    
+}
+
+.flower-card {
+    background: white;
+    border: 1px solid #f1d5e3;
+    border-radius: 12px;
+    width: 350px;
+    height:500px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+    transition: transform 0.2s ease;
+}
+.flower-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.flower-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.flower-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 70%;
+     /* Ensures image maintains aspect ratio */
+    border-bottom: 2px solid #ddd;
+    transition: opacity 0.3s ease;
+}
+.flower-card .flower-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+}
+.flower-card:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Focus effect with blue shadow */
+}
+.flower-card img:hover {
+    opacity: 0.8; /* Slight fade effect when the image is hovered */
+}
+
+.flower-card h3 {
+    margin: 12px 0 8px;
+    color: #cc2e6c;
+    font-size: 1.2em;
+}
+
+.flower-card p {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #cc2e6c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #a9255b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #ffe6f0;
+}
+
+form textarea,
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+.order-box {
+    padding: 15px;
+    border: 1px solid #f0b6cc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #fff2f7;
+}
+
+ 
+.flower-detail-container {
+    padding: 30px;
+    background-color: #fffafc;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flower-header {
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.flower-header h2 {
+   
+    font-size: 2em;
+    color: #cc2e6c;
+    margin-bottom:10px;
+}
+
+.flower-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.flower-description h3 {
+    font-size: 1.6em;
+    color: #d14c8b;
+    margin-bottom: 15px;
+}
+
+.flower-description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.1em;
+    list-style-type: none;
+}
+
+.flower-price p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.add-to-cart {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.add-to-cart button {
+    padding: 12px 25px;
+    background-color: #a9255b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart button:hover {
+    background-color: #cc2e6c;
+}
+
+
+.footer {
+    background-color: #fdf6f0;
+    color: #5a3e36;
+    padding: 40px 20px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .footer {
+    background-color: #fdf6f0;
+    color: #5a3e36;
+    padding: 40px 20px;
+    font-family: 'Georgia', serif;
+    border-top: 2px solid #e0c097;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    flex: 1 1 200px;
+  }
+  
+  .footer-links h3,
+  .footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0c097;
+    padding-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 8px 0;
+  }
+  
+  .footer-links a {
+    color: #5a3e36;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #b3745b;
+    text-decoration: underline;
+  }
+  
+  .footer-social a img {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social a img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #8a6e63;
+    border-top: 1px solid #e0c097;
+  }
+  .logout-page {
+    
+    width:976px;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #fff; /* optional */
+}
+
+.logout-container {
+    
+     /* horizontal line */
+    
+    gap: 2rem;
+    padding: 5rem;
+    background: #ffe6f0;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.logout-item{
+    padding:14px;
+    margin:15px;
+    border:#444;
+}
+
+.logout-item h2{
+    font-size: 42px;
+}
+.logout-item p{
+    font-size: 20px;
+}
+
+
+
+.login-again-button,.return_to_home {
+    background-color: #f23393;
+    color: white;
+    margin:15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 19px;
+}
+.login-again-button:hover{
+    background-color: #d63384;
+}
+.form-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 30%;
+    padding: 10px;
+    background-color: #f23393;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #d14c8b;
+}
+.welcome-text{
+    cursor:pointer;
+}
+
+
+.register-item{
+    font-size: larger;
+}
+
+.register-button{
+    padding:15px;
+    background-color: #f23393;
+}
+.register-button:hover{
+    background-color: #d63384;
+}
+
+.login-link{
+    margin-top: 15px;
+}
+.login-link p{
+    font-size: medium;
+}
+
+ 
+
+
+/* --- Budget Page Custom CSS --- */
+
+.budget-search-form {
+    background: #ffe6f0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.2);
+    margin-bottom: 50px;
+}
+
+.budget-search-form input[type="number"] {
+    border: 1px solid #f3c5d5;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #fffafc;
+    color: #333;
+}
+
+.budget-search-form input[type="number"]:focus {
+    outline: none;
+    border-color: #d63384;
+    box-shadow: 0 0 8px rgba(214, 51, 132, 0.3);
+}
+
+.budget-search-form button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.budget-search-form button:hover {
+    background-color: #a61c5f;
+}
+
+.budget-clear-button {
+    background-color: #ccc;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.budget-clear-button:hover {
+    background-color: #999;
+}
+
+/* Flower Cards in Budget Page */
+.budget-flower-card {
+    background: #ffffff;
+    border: 1px solid #f8d7e3;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.budget-flower-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #f1d1e3;
+    transition: opacity 0.3s;
+}
+
+.budget-flower-card img:hover {
+    opacity: 0.8;
+}
+
+.budget-flower-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.budget-flower-card .card-title {
+    font-size: 1.3rem;
+    color: #cc2e6c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.budget-flower-card .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.budget-flower-card .card-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d63384;
+    margin-top: auto;
+}
+
+/* Empty State Message */
+.budget-empty-message {
+    font-size: 1.5rem;
+    color: #d14c8b;
+    background: #fff0f7;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+}

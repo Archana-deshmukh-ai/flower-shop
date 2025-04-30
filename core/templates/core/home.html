@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="search-bar">
+    <form method="get" action="{% url 'search_flowers' %}">
+        <input type="text" name="q" placeholder="Search for flowers..." required>
+        <button id="search" type="submit">Search</button>
+    </form>
+</div>
+<h1 class="h1">🌺 Sprinkle Some Floral Joy into Your Life 🌺</h1>
+<div class="flower-grid">
+    {% for flower in flowers %}
+    <div class="flower-card">
+        {% if flower.image %}
+            <img src="{{ flower.image.url }}" alt="{{ flower.name }}">
+        {% else %}
+            <img src="{% static 'images/placeholder.png' %}" alt="No Image">
+        {% endif %}
+        <h3>{{ flower.name }}</h3>
+        <p>₹{{ flower.price }}</p>
+        <a href="{% url 'flower_detail' flower.id %}">
+            <button>View Details</button>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

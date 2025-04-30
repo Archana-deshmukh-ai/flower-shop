@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load custom_filters %}
+
+{% block content %}
+<div class="flower-detail-container">
+
+    <div class="flower-header">
+        <h2>{{ flower.name }}</h2>
+        <img src="{{ flower.image.url }}" alt="{{ flower.name }}" class="flower-image">
+    </div>
+
+    <div class="flower-description">
+        <h3>Description</h3>
+        <ul>
+            {% for detail in flower.description|splitlines %}
+                <li>{{ detail }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="flower-price">
+        <p><strong>Price:</strong> ₹{{ flower.price }}</p>
+    </div>
+
+    <div class="add-to-cart">
+        <a href="{% url 'add_to_cart' flower.id %}">
+            <button onclick="this.disabled=true; this.form.submit();">Add to Bouquet</button>
+        </a>
+    </div>
+</div>
+{% endblock %}

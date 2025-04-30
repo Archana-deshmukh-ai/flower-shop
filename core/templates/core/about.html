@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+  
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    {% endblock %}
+{% block content %}
+<div class="page-background">
+    <div class="container about-us">
+
+        <h1>About Us</h1>
+
+        <p class="para">
+            Welcome to <strong>Himalayan Florals</strong> - your one-stop destination for all things floral! 🌸
+            We specialize in crafting stunning flower arrangements that speak the language of love, care, and celebration.
+            Whether you're looking for a birthday bouquet, wedding decor, or just want to brighten someone's day, we've got you covered.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p class="para">
+            To bring joy, color, and fragrance into everyday lives through beautiful, fresh, and sustainable floral designs.
+        </p>
+
+        <h2>Our Vision</h2>
+        <p class="para">
+            To become the most loved and trusted flower delivery brand by offering creativity, care, and commitment in every petal we deliver.
+        </p>
+
+        <h2>Core Values</h2>
+        <div class="core-values">
+        <ul >
+            <li><strong>🌱 Sustainability:</strong> We use eco-friendly practices and source locally whenever possible.</li>
+            <li><strong>💖 Customer Delight:</strong> Your happiness is our top priority - always.</li>
+            <li><strong>🎨 Creativity:</strong> Every bouquet is a piece of art designed with passion.</li>
+            <li><strong>🚚 Timely Delivery:</strong> Fresh flowers delivered at the right moment, every time.</li>
+        </ul>
+        </div>
+
+        <p class="thank-you">Thank you for choosing us to be a part of your special moments! 🌷</p>
+    </div>
+</div>
+{%endblock%}

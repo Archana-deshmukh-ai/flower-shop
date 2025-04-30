@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{%load static%}
+ 
+{% block content %}
+<h1>{{ title }}</h1>
+<div class="flower-grid">
+  {% for flower in flowers %}
+    <div class="flower-card">
+      <img src="{{ flower.image.url }}" alt="{{ flower.name }}">
+      <h3>{{ flower.name }}</h3>
+      <p>₹{{ flower.price }}</p>
+      <a href="{% url 'flower_detail' flower.id %}">
+        <button>View Details</button>
+    </a>
+    </div>
+    
+      
+  {% empty %}
+    <p>No flowers found in this category.</p>
+  {% endfor %}
+</div>
+{% endblock %}

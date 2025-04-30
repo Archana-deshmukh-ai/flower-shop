@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock %}
+{% block content %}
+<div class="contact-container">
+    <h1>Contact Us</h1>
+
+    <p>If you have any questions, concerns, or just want to say hello, feel free to reach out to us. We're here to help!</p>
+
+    <h2 class="contact-h2">Contact Information</h2>
+    <ul class="contact-ul">
+        <li><strong>Phone:</strong> +1 234 567 890</li>
+        <li><strong>Email:</strong> support@himalayanflorals.com</li>
+        <li><strong>Address:</strong> 123 Flower street, Surat, Gujarat, India</li>
+    </ul>
+
+    <h2 class="contact-h2">Send Us a Message</h2>
+    <form action="{% url 'contact_form' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Send Message</button>
+        </div>
+    </form>
+</div>
+
+    
+{% endblock %}

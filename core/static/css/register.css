@@ -1,0 +1,98 @@
+/* Basic Reset */
+/* html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffafc;
+} */
+
+/* Container for the entire register page */
+.register-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px; /* Adjust for fixed navbar */
+}
+
+/* Container for the form and its items */
+.register-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each section/item in the register container */
+.register-item {
+    margin-bottom: 20px;
+}
+
+/* Styling for the form heading */
+.register-item h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #d14c8b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Register form styling */
+.register-form .form-group {
+    margin-bottom: 15px;
+}
+
+/* Styling for input fields in the form */
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Styling for the submit button */
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #a61c5f;
+}
+
+/* Login link section */
+.login-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Styling for the Login link */
+.login-again-button {
+    color: #d63384;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-again-button:hover {
+    text-decoration: underline;
+}
+
+ 

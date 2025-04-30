@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h2>Your Orders</h2>
+<ul>
+    {% for order in orders %}
+    <li>
+        <strong>Order #{{ order.id }}</strong><br>
+        Date: {{ order.order_date }}<br>
+        Status: {{ order.get_status_display }}<br>
+        Address: {{ order.delivery_address }}<br>
+        Items:
+    <ul>
+    {% for item in order.items.all %}
+    <li>{{ item.flower.name }} - ₹{{ item.flower.price }} * {{ item.quantity }} = ₹{{ item.total_price }}</li>
+    {% endfor %}
+    </ul>
+
+    </li>
+    {% empty %}
+    <li>You have not placed any orders yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

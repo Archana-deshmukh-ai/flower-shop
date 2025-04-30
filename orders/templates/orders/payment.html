@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h2>Payment</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <label>Choose Payment Method:</label><br>
+    <select name="payment_method" required>
+        <option value="cod">Cash on Delivery</option>
+        <option value="card">Credit/Debit Card</option>
+    </select><br><br>
+
+    <div id="card-fields" style="display: none;">
+        <label>Card Number:</label><br>
+        <input type="text" name="card_number" placeholder="XXXX XXXX XXXX XXXX" ><br><br>
+
+        <label>Expiry Date:</label><br>
+        <input type="text" name="expiry" placeholder="MM/YY"><br><br>
+
+        <label>CVV:</label><br>
+        <input type="password" name="cvv" placeholder="***"><br><br>
+    </div>
+
+    <button type="submit">Proceed</button>
+</form>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const paymentMethodSelect = document.querySelector('select[name="payment_method"]');
+    const cardFields = document.getElementById('card-fields');
+
+    function toggleCardFields() {
+        if (paymentMethodSelect.value === 'card') {
+            cardFields.style.display = 'block';
+        } else {
+            cardFields.style.display = 'none';
+        }
+    }
+
+    paymentMethodSelect.addEventListener('change', toggleCardFields);
+    toggleCardFields();
+
+});
+</script>
+{% endblock %}

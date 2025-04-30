@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center mb-5" style="color: #d14c8b; font-size: 48px;">Find Flowers Within Your Budget 💐</h2>
+
+    <form method="get" action="" class="row g-3 justify-content-center mb-5 search-bar">
+        <div class="col-md-3">
+            <input type="number" name="min_price" id="min_price" class="form-control" placeholder="Min Price" required>
+        </div>
+        <div class="col-md-3">
+            <input type="number" name="max_price" id="max_price" class="form-control" placeholder="Max Price" required>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn w-100" style="background-color: #d63384; color: white;">Search</button>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'budget' %}" class="btn btn-secondary w-100" style="background-color: #a9255b; color: white;"><button>Clear</button></a>
+        </div>
+    </form>
+
+    <div class="flower-grid-wrapper">
+        <div class="flower-grid">
+            {% for flower in flowers %}
+            <div class="flower-card">
+                <img src="{{ flower.image.url }}" alt="{{ flower.name }}">
+                <h3>{{ flower.name }}</h3>
+                <p>₹{{ flower.price }}</p>
+                <a href="{% url 'flower_detail' flower.id %}">
+                  <button>View Details</button>
+              </a>
+              </div>
+            {% empty %}
+            <div class="text-center" style="margin-top: 50px;">
+                <p class="lead" style="font-size: 24px; color: #a9255b;">No flowers found in this price range. 😔</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
